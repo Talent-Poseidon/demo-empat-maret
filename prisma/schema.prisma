@@ -60,3 +60,11 @@ model VerificationToken {
 
   @@unique([identifier, token])
 }
+
+model JobStandard {
+  id                String  @id @default(cuid())
+  title             String
+  scoreExpectation  Int
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+}
